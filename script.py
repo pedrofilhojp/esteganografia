@@ -169,10 +169,6 @@ def encript(image, text):
     pixels = put_letter_in_3pixels(image, pixels,DELIMITER)
     pixels = put_letter_in_3pixels(image, pixels,DELIMITER)
    
-    # Caso o texto nao utilize a imagem por completo
-    # é necessario colocar os pixels restantes no mapa de pixel
-    # pixels = mapping_image(image, pixels)
-
     return image
 
 #
@@ -239,32 +235,6 @@ def put_letter_in_3pixels(image, pixels,letter):
 
     return pixels
 
-#
-# Remonta a imagem do zero, pega os p
-#
-def mapping_image(image, pixels):
-    global POS_WIDTH, POS_HEIGHT
-
-    # pegando tamanho da imagem
-    width, height = image.size
-
-    for i in range(POS_WIDTH,width):    
-        for j in range(POS_HEIGHT,height):
-            # print("Mapping")
-            # print("width:"+str(width)+"["+str(POS_WIDTH)+"] i="+str(i)+" == height:"+str(height)+"["+str(POS_HEIGHT)+"] j="+str(j))
-            # print(f'{i},{j}')
-            # exit(0)
-            # Pega o pixel correspondente
-            pixel = get_pixel(image, i, j)
-
-            # letter_bits = get_bits_from_letter('A',9)
-            # print(letter_bits)
-            # bits = (letter_bits)[0:3]
-            # pixel = put_3bits_in_pixel(bits, pixel)
-
-            pixels[i, j] = pixel
-            
-    return pixels
 #
 # Adicionar 3 bits no pixel RGB
 # Retorna uma tupla com os palores de RGB
@@ -339,7 +309,7 @@ if __name__ == "__main__":
         print('Erro na passagem dos parâmetros')
         print('--------------------------------')
         print('Para realizar a esteganogra utilize o paramtro (e):')
-        print('./script.py e imagem.png')
+        print('./script.py e ifpb.png')
         print(' ')
         print('Para realizar a extrair utilize o parametro (d):')
         print('./script.py d new_imagem.png')        
