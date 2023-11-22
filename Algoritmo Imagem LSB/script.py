@@ -2,7 +2,7 @@
 
 #   Autor: Pedro Filho
 #   Email: pedro.filho.jp@gmail.com
-#   Data 08/Jun/2020
+#   Criado em 08/Jun/2020, atualizado em 22 Nov 2023 (Conferencia Tempest)
 #   
 #   Este é um algoritmo para realizar esteganografia utilizando o bit
 #   menos significativo do pixel. 
@@ -18,7 +18,7 @@
 from PIL import Image
 import sys
 
-# Print na tela algumas informacoes
+# Print na tela algumas informacoes de conversao do pixel
 DEBUG=False
 
 #caracter delimitador, sera inserido 3 desses caracteres no fim da mensagem
