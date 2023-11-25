@@ -19,7 +19,7 @@ from PIL import Image
 import sys
 
 # Print na tela algumas informacoes de conversao do pixel
-DEBUG=False
+DEBUG=True
 
 #caracter delimitador, sera inserido 3 desses caracteres no fim da mensagem
 DELIMITER='#'
@@ -268,7 +268,7 @@ def put_3bits_in_pixel(bits, pixel):
     pixel = (int(r,2), int(g,2), int(b,2), pixel[3])
 
     if (DEBUG):
-        print("r:"+str(r)+" g:"+str(g)+" b:"+str(b)+"["+ bits +"]")
+        print("r:"+str(r)+" g:"+str(g)+" b:"+str(b)+" ["+ bits +"]")
 
     return pixel
 
